@@ -47,6 +47,8 @@
 #Requires -RunAsAdministrator
 #Requires -Version 7.1
 
+# NOTE: Did not work with PowerShell v7.1.3 as of 26.03.2021
+
 [CmdletBinding()]
 param
 (
@@ -245,11 +247,11 @@ BingSearch -Disable
 #region UI & Personalization
 # Show the "This PC" icon on Desktop
 # Отобразить значок "Этот компьютер" на рабочем столе
-ThisPC -Show
+# ThisPC -Show
 
 # Hide the "This PC" icon on Desktop (default value)
 # Скрывать "Этот компьютер" на рабочем столе (значение по умолчанию)
-# ThisPC -Hide
+ThisPC -Hide
 
 # Do not use check boxes to select items
 # Не использовать флажки для выбора элементов
@@ -261,11 +263,11 @@ CheckBoxes -Disable
 
 # Show hidden files, folders, and drives
 # Отображать скрытые файлы, папки и диски
-HiddenItems -Enable
+# HiddenItems -Enable
 
 # Do not show hidden files, folders, and drives (default value)
 # Не отображать скрытые файлы, папки и диски (значение по умолчанию)
-# HiddenItems -Disable
+HiddenItems -Disable
 
 # Show file name extensions
 # Отображать расширения имён файлов
@@ -285,11 +287,11 @@ MergeConflicts -Show
 
 # Open File Explorer to: "This PC"
 # Открывать проводник для: "Этот компьютер"
-OpenFileExplorerTo -ThisPC
+# OpenFileExplorerTo -ThisPC
 
 # Open File Explorer to: "Quick access" (default value)
 # Открывать проводник для: "Быстрый доступ" (значение по умолчанию)
-# OpenFileExplorerTo -QuickAccess
+OpenFileExplorerTo -QuickAccess
 
 # Hide Cortana button on the taskbar
 # Скрывать кнопку Кортаны на панели задач
@@ -349,11 +351,11 @@ FileTransferDialog -Detailed
 
 # Expand the File Explorer ribbon
 # Развернуть ленту проводника
-FileExplorerRibbon -Expanded
+# FileExplorerRibbon -Expanded
 
 # Minimize the File Explorer ribbon (default value)
 # Свернуть ленту проводника (значение по умолчанию)
-# FileExplorerRibbon -Minimized
+FileExplorerRibbon -Minimized
 
 # Display the recycle bin files delete confirmation
 # Запрашивать подтверждение на удаление файлов в корзину
@@ -409,11 +411,11 @@ WindowsInkWorkspace -Hide
 
 # Always show all icons in the notification area
 # Всегда отображать все значки в области уведомлений
-TrayIcons -Show
+# TrayIcons -Show
 
 # Do not show all icons in the notification area (default value)
 # Не отображать все значки в области уведомлений (значение по умолчанию)
-# TrayIcons -Hide
+TrayIcons -Hide
 
 # Hide the Meet Now icon in the notification area
 # Скрыть иконку "Провести собрание" в трее
@@ -513,11 +515,11 @@ PrtScnSnippingTool -Enable
 
 # Let me use a different input method for each app window
 # Позволить выбирать метод ввода для каждого окна
-AppsLanguageSwitch -Enable
+# AppsLanguageSwitch -Enable
 
 # Do not let use a different input method for each app window (default value)
 # Не позволять выбирать метод ввода для каждого окна (значение по умолчанию)
-# AppsLanguageSwitch -Disable
+AppsLanguageSwitch -Disable
 #endregion UI & Personalization
 
 #region OneDrive
@@ -705,11 +707,11 @@ PCTurnOffDevice -Disable
 
 # Override for default input method: English
 # Переопределить метод ввода по умолчанию: английский
-SetInputMethod -English
+# SetInputMethod -English
 
 # Override for default input method: use langiage list (default value)
 # Переопределить метод ввода по умолчанию: использовать список языков (значение по умолчанию)
-# SetInputMethod -Default
+SetInputMethod -Default
 
 <#
 	Move user folders location to the root of any drive using the interactive menu
@@ -740,11 +742,11 @@ SetUserShellFolderLocation -Root
 
 # Save screenshots by pressing Win+PrtScr on the Desktop
 # Сохранять скриншоты по нажатию Win+PrtScr на рабочий столе
-WinPrtScrFolder -Desktop
+# WinPrtScrFolder -Desktop
 
 # Save screenshots by pressing Win+PrtScr on the Pictures folder (default value)
 # Cохранять скриншоты по нажатию Win+PrtScr в папку "Изображения" (значение по умолчанию)
-# WinPrtScrFolder -Default
+WinPrtScrFolder -Default
 
 <#
 	Run troubleshooters automatically, then notify
@@ -846,19 +848,19 @@ NetworkDiscovery -Enable
 
 # Automatically adjust active hours for me based on daily usage
 # Автоматически изменять период активности для этого устройства на основе действий
-SmartActiveHours -Enable
+# SmartActiveHours -Enable
 
 # Do not automatically adjust active hours for me based on daily usage (default value)
 # Не изменять автоматически период активности для этого устройства на основе действий (значение по умолчанию)
-# SmartActiveHours -Disable
+SmartActiveHours -Disable
 
 # Restart this device as soon as possible when a restart is required to install an update
 # Перезапускать это устройство как можно быстрее, если для установки обновления требуется перезагрузка
-DeviceRestartAfterUpdate -Enable
+# DeviceRestartAfterUpdate -Enable
 
 # Do not restart this device as soon as possible when a restart is required to install an update (default value)
 # Не перезапускать это устройство как можно быстрее, если для установки обновления требуется перезагрузка (значение по умолчанию)
-# DeviceRestartAfterUpdate -Disable
+DeviceRestartAfterUpdate -Disable
 
 <#
 	Register app, calculate hash, and set as default for specific extension without the "How do you want to open this?" pop-up
@@ -875,7 +877,7 @@ DeviceRestartAfterUpdate -Enable
 #region WSL
 # Install the Windows Subsystem for Linux (WSL)
 # Установить подсистему Windows для Linux (WSL)
-# WSL -Enable
+WSL -Enable
 
 # Uninstall the Windows Subsystem for Linux (WSL)
 # Удалить подсистему Windows для Linux (WSL)
@@ -890,17 +892,17 @@ DeviceRestartAfterUpdate -Enable
 	Установить WSL 2 как версию по умолчанию при установке нового дистрибутива Linux
 	Выполните функцию только после установки WSL и перезагрузка ПК
 #>
-# EnableWSL2
+EnableWSL2
 #endregion WSL
 
 #region Start menu
 # Hide recently added apps in the Start menu
 # Скрывать недавно добавленные приложения в меню "Пуск"
-RecentlyAddedApps -Hide
+# RecentlyAddedApps -Hide
 
 # Show recently added apps in the Start menu (default value)
 # Показывать недавно добавленные приложения в меню "Пуск" (значение по умолчанию)
-# RecentlyAddedApps -Show
+RecentlyAddedApps -Show
 
 # Hide app suggestions in the Start menu
 # Скрывать рекомендации в меню "Пуск"
@@ -925,13 +927,13 @@ RunPowerShellShortcut -Elevated
 	Закрепить на начальном экране следующие ярлыки: Панель управдения, Устройства и принтеры, PowerShell
 	Валидные значения ярлыков: ControlPanel, DevicesPrinters, PowerShell
 #>
-PinToStart -Tiles ControlPanel, DevicesPrinters, PowerShell
+# PinToStart -Tiles ControlPanel, DevicesPrinters, PowerShell
 
 <#
 	Unpin all tiles first and pin necessary ones
 	Открепить все ярлыки сначала и закрепить необходимые
 #>
-# PinToStart -UnpinAll -Tiles ControlPanel, DevicesPrinters, PowerShell
+PinToStart -UnpinAll -Tiles ControlPanel, DevicesPrinters, PowerShell
 
 # Unpin all the Start tiles
 # Открепить все ярлыки от начального экрана
@@ -948,7 +950,7 @@ PinToStart -Tiles ControlPanel, DevicesPrinters, PowerShell
 	Пакеты приложений не будут установлены для новых пользователей, если отмечена галочка "Для всех пользователей"
 	Галочка "Для всех пользователей" не отмечена по умолчанию
 #>
-UninstallUWPApps
+# UninstallUWPApps
 
 <#
 	Uninstall UWP apps using the pop-up dialog box
@@ -959,7 +961,7 @@ UninstallUWPApps
 	Пакеты приложений не будут установлены для новых пользователей, если отмечена галочка "Для всех пользователей"
 	Галочка "Для всех пользователей" отмечена по умолчанию
 #>
-# UninstallUWPApps -ForAllUsers
+UninstallUWPApps -ForAllUsers
 
 <#
 	Open Microsoft Store "HEVC Video Extensions from Device Manufacturer" page to install this extension manually to be able to open .heic and .heif formats
