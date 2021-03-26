@@ -186,7 +186,7 @@ LanguageListAccess -Disable
 # Позволять веб-сайтам предоставлять местную информацию за счет доступа к списку языков (значение по умолчанию)
 # LanguageListAccess -Enable
 
-# Do not allow apps to use advertising ID to make ads more interresting to you based on your app usage 
+# Do not allow apps to use advertising ID to make ads more interresting to you based on your app usage
 # Не разрешать приложениям использовать идентификатор рекламы
 AdvertisingID -Disable
 
@@ -254,11 +254,11 @@ BingSearch -Disable
 #region UI & Personalization
 # Show the "This PC" icon on Desktop
 # Отобразить значок "Этот компьютер" на рабочем столе
-ThisPC -Show
+# ThisPC -Show
 
 # Hide the "This PC" icon on Desktop (default value)
 # Скрыть "Этот компьютер" на рабочем столе (значение по умолчанию)
-# ThisPC -Hide
+ThisPC -Hide
 
 # Do not use item check boxes
 # Не использовать флажки для выбора элементов
@@ -270,11 +270,11 @@ CheckBoxes -Disable
 
 # Show hidden files, folders, and drives
 # Отобразить скрытые файлы, папки и диски
-HiddenItems -Enable
+# HiddenItems -Enable
 
 # Do not show hidden files, folders, and drives (default value)
 # Не показывать скрытые файлы, папки и диски (значение по умолчанию)
-# HiddenItems -Disable
+HiddenItems -Disable
 
 # Show file name extensions
 # Отобразить расширения имён файлов
@@ -294,11 +294,11 @@ MergeConflicts -Show
 
 # Open File Explorer to "This PC"
 # Открывать проводник для "Этот компьютер"
-OpenFileExplorerTo -ThisPC
+# OpenFileExplorerTo -ThisPC
 
 # Open File Explorer to Quick access (default value)
 # Открывать проводник для "Быстрый доступ" (значение по умолчанию)
-# OpenFileExplorerTo -QuickAccess
+OpenFileExplorerTo -QuickAccess
 
 # Hide Cortana button on the taskbar
 # Скрывать кнопку Кортаны на панели задач
@@ -334,11 +334,11 @@ FileTransferDialog -Detailed
 
 # Expand the File Explorer ribbon
 # Развернуть ленту проводника
-FileExplorerRibbon -Expanded
+# FileExplorerRibbon -Expanded
 
 # Minimize the File Explorer ribbon (default value)
 # Свернуть ленту проводника (значение по умолчанию)
-# FileExplorerRibbon -Minimized
+FileExplorerRibbon -Minimized
 
 # Display the recycle bin files delete confirmation dialog
 # Запрашивать подтверждение на удаление файлов в корзину
@@ -418,11 +418,11 @@ WindowsInkWorkspace -Hide
 
 # Always show all icons in the notification area
 # Всегда отображать все значки в области уведомлений
-NotificationAreaIcons -Show
+# NotificationAreaIcons -Show
 
 # Hide all icons in the notification area (default value)
 # Скрыть все значки в области уведомлений (значение по умолчанию)
-# NotificationAreaIcons -Hide
+NotificationAreaIcons -Hide
 
 # Hide the Meet Now icon in the notification area
 # Скрыть иконку "Провести собрание" в области уведомлений
@@ -530,11 +530,11 @@ PrtScnSnippingTool -Enable
 
 # Let me use a different input method for each app window
 # Позволить выбирать метод ввода для каждого окна
-AppsLanguageSwitch -Enable
+# AppsLanguageSwitch -Enable
 
 # Do not use a different input method for each app window (default value)
 # Не использовать метод ввода для каждого окна (значение по умолчанию)
-# AppsLanguageSwitch -Disable
+AppsLanguageSwitch -Disable
 
 # When I grab a windows's title bar and shake it, minimize all other windows
 # При захвате заголовка окна и встряхивании сворачивать все остальные окна
@@ -778,11 +778,11 @@ SetUserShellFolderLocation -Root
 
 # Save screenshots by pressing Win+PrtScr on the Desktop
 # Сохранять скриншоты по нажатию Win+PrtScr на рабочий столе
-WinPrtScrFolder -Desktop
+# WinPrtScrFolder -Desktop
 
 # Save screenshots by pressing Win+PrtScr on the Pictures folder (default value)
 # Cохранять скриншоты по нажатию Win+PrtScr в папку "Изображения" (значение по умолчанию)
-# WinPrtScrFolder -Default
+WinPrtScrFolder -Default
 
 <#
 	Run troubleshooter automatically, then notify me
@@ -884,19 +884,19 @@ NetworkDiscovery -Enable
 
 # Automatically adjust active hours for me based on daily usage
 # Автоматически изменять период активности для этого устройства на основе действий
-ActiveHours -Automatically
+# ActiveHours -Automatically
 
 # Manually adjust active hours for me based on daily usage (default value)
 # Вручную изменять период активности для этого устройства на основе действий (значение по умолчанию)
-# ActiveHours -Manually
+ActiveHours -Manually
 
 # Restart this device as soon as possible when a restart is required to install an update
 # Перезапускать это устройство как можно быстрее, если для установки обновления требуется перезагрузка
-RestartDeviceAfterUpdate -Enable
+# RestartDeviceAfterUpdate -Enable
 
 # Do not restart this device as soon as possible when a restart is required to install an update (default value)
 # Не перезапускать это устройство как можно быстрее, если для установки обновления требуется перезагрузка (значение по умолчанию)
-# RestartDeviceAfterUpdate -Disable
+RestartDeviceAfterUpdate -Disable
 
 <#
 	Register app, calculate hash, and associate with an extension with the "How do you want to open this" pop-up hidden
@@ -911,17 +911,17 @@ RestartDeviceAfterUpdate -Enable
 #region WSL
 # Enable Windows Subsystem for Linux (WSL), install the latest WSL Linux kernel version, and a Linux distribution using a pop-up form
 # Установить подсистему Windows для Linux (WSL), последний пакет обновления ядра Linux и дистрибутив Linux, используя всплывающую форму
-# WSL -Enable
+WSL -Enable
 #endregion WSL
 
 #region Start menu
 # Hide recently added apps in the Start menu
 # Скрывать недавно добавленные приложения в меню "Пуск"
-RecentlyAddedApps -Hide
+# RecentlyAddedApps -Hide
 
 # Show recently added apps in the Start menu (default value)
 # Показывать недавно добавленные приложения в меню "Пуск" (значение по умолчанию)
-# RecentlyAddedApps -Show
+RecentlyAddedApps -Show
 
 # Hide app suggestions in the Start menu
 # Скрывать рекомендации в меню "Пуск"
@@ -946,11 +946,11 @@ RunPowerShellShortcut -Elevated
 	Закрепить на начальном экране следующие ярлыки: Панель управления, Устройства и принтеры, PowerShell
 	Валидные значения ярлыков: ControlPanel, DevicesPrinters, PowerShell
 #>
-PinToStart -Tiles ControlPanel, DevicesPrinters, PowerShell
+# PinToStart -Tiles ControlPanel, DevicesPrinters, PowerShell
 
 # Unpin all tiles first and pin necessary ones
 # Открепить все ярлыки сначала и закрепить необходимые
-# PinToStart -UnpinAll -Tiles ControlPanel, DevicesPrinters, PowerShell
+PinToStart -UnpinAll -Tiles ControlPanel, DevicesPrinters, PowerShell
 
 # Unpin all the Start tiles
 # Открепить все ярлыки от начального экрана
@@ -967,7 +967,7 @@ PinToStart -Tiles ControlPanel, DevicesPrinters, PowerShell
 	Пакеты приложений не будут установлены для новых пользователей, если отмечена галочка "Для всех пользователей"
 	Аргумент "ForAllUsers" устанавливает галочку для удаления пакетов для всех пользователей
 #>
-UninstallUWPApps
+UninstallUWPApps -ForAllUsers
 
 <#
 	Restore the default UWP apps using the pop-up dialog box

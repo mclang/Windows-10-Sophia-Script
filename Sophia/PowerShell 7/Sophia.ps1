@@ -61,6 +61,8 @@
 #Requires -RunAsAdministrator
 #Requires -Version 7.1
 
+# NOTE: Did not work with PowerShell v7.1.3 as of 26.03.2021
+
 [CmdletBinding()]
 param
 (
@@ -186,7 +188,7 @@ LanguageListAccess -Disable
 # Позволять веб-сайтам предоставлять местную информацию за счет доступа к списку языков (значение по умолчанию)
 # LanguageListAccess -Enable
 
-# Do not allow apps to use advertising ID to make ads more interresting to you based on your app usage 
+# Do not allow apps to use advertising ID to make ads more interresting to you based on your app usage
 # Не разрешать приложениям использовать идентификатор рекламы
 AdvertisingID -Disable
 
@@ -254,7 +256,7 @@ BingSearch -Disable
 #region UI & Personalization
 # Show the "This PC" icon on Desktop
 # Отобразить значок "Этот компьютер" на рабочем столе
-ThisPC -Show
+# ThisPC -Show
 
 # Hide the "This PC" icon on Desktop (default value)
 # Скрыть "Этот компьютер" на рабочем столе (значение по умолчанию)
@@ -334,11 +336,11 @@ FileTransferDialog -Detailed
 
 # Expand the File Explorer ribbon
 # Развернуть ленту проводника
-FileExplorerRibbon -Expanded
+# FileExplorerRibbon -Expanded
 
 # Minimize the File Explorer ribbon (default value)
 # Свернуть ленту проводника (значение по умолчанию)
-# FileExplorerRibbon -Minimized
+FileExplorerRibbon -Minimized
 
 # Display the recycle bin files delete confirmation dialog
 # Запрашивать подтверждение на удаление файлов в корзину
@@ -530,7 +532,7 @@ PrtScnSnippingTool -Enable
 
 # Let me use a different input method for each app window
 # Позволить выбирать метод ввода для каждого окна
-AppsLanguageSwitch -Enable
+# AppsLanguageSwitch -Enable
 
 # Do not use a different input method for each app window (default value)
 # Не использовать метод ввода для каждого окна (значение по умолчанию)
@@ -778,11 +780,11 @@ SetUserShellFolderLocation -Root
 
 # Save screenshots by pressing Win+PrtScr on the Desktop
 # Сохранять скриншоты по нажатию Win+PrtScr на рабочий столе
-WinPrtScrFolder -Desktop
+# WinPrtScrFolder -Desktop
 
 # Save screenshots by pressing Win+PrtScr on the Pictures folder (default value)
 # Cохранять скриншоты по нажатию Win+PrtScr в папку "Изображения" (значение по умолчанию)
-# WinPrtScrFolder -Default
+WinPrtScrFolder -Default
 
 <#
 	Run troubleshooter automatically, then notify me
@@ -917,11 +919,11 @@ RestartDeviceAfterUpdate -Enable
 #region Start menu
 # Hide recently added apps in the Start menu
 # Скрывать недавно добавленные приложения в меню "Пуск"
-RecentlyAddedApps -Hide
+# RecentlyAddedApps -Hide
 
 # Show recently added apps in the Start menu (default value)
 # Показывать недавно добавленные приложения в меню "Пуск" (значение по умолчанию)
-# RecentlyAddedApps -Show
+RecentlyAddedApps -Show
 
 # Hide app suggestions in the Start menu
 # Скрывать рекомендации в меню "Пуск"
@@ -946,7 +948,7 @@ RunPowerShellShortcut -Elevated
 	Закрепить на начальном экране следующие ярлыки: Панель управления, Устройства и принтеры, PowerShell
 	Валидные значения ярлыков: ControlPanel, DevicesPrinters, PowerShell
 #>
-PinToStart -Tiles ControlPanel, DevicesPrinters, PowerShell
+# PinToStart -Tiles ControlPanel, DevicesPrinters, PowerShell
 
 # Unpin all tiles first and pin necessary ones
 # Открепить все ярлыки сначала и закрепить необходимые
@@ -967,7 +969,7 @@ PinToStart -Tiles ControlPanel, DevicesPrinters, PowerShell
 	Пакеты приложений не будут установлены для новых пользователей, если отмечена галочка "Для всех пользователей"
 	Аргумент "ForAllUsers" устанавливает галочку для удаления пакетов для всех пользователей
 #>
-UninstallUWPApps
+# UninstallUWPApps
 
 <#
 	Restore the default UWP apps using the pop-up dialog box
